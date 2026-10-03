@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Política de Privacidade do Cota+"
+    >
+
+    <title>Cota+ - Política de Privacidade</title>
+
+    <style>
+        :root {
+            --bg: #f4f8fb;
+            --surface: #ffffff;
+            --text: #17202a;
+            --text-secondary: #64707d;
+            --border: #d9e4ea;
+            --accent: #0b74de;
+            --accent-secondary: #0aa6a6;
+            --accent-soft: #e8f3ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(11, 116, 222, 0.08),
+                    transparent 34%
+                ),
+                radial-gradient(
+                    circle at top right,
+                    rgba(10, 166, 166, 0.08),
+                    transparent 32%
+                ),
+                var(--bg);
+
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        .container {
+            width: min(920px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 40px 0 64px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 14px;
+
+            color: #ffffff;
+            font-size: 1.05rem;
+            font-weight: 700;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--accent-secondary),
+                    var(--accent)
+                );
+
+            box-shadow:
+                0 8px 22px rgba(11, 116, 222, 0.18);
+        }
+
+        .app-name {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .subtitle {
+            margin-top: 8px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 28px 0;
+        }
+
+        .language-button {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+
+            padding: 10px 18px;
+            border-radius: 999px;
+
+            font-size: 0.95rem;
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+        }
+
+        .language-button:hover {
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .language-button.active {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--accent-secondary),
+                    var(--accent)
+                );
+
+            color: #ffffff;
+            border-color: transparent;
+        }
+
+        .policy {
+            display: none;
+
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+
+            padding: 32px;
+
+            box-shadow:
+                0 10px 30px rgba(20, 41, 61, 0.06);
+        }
+
+        .policy.active {
+            display: block;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.9rem;
+            line-height: 1.25;
+        }
+
+        h2 {
+            margin-top: 32px;
+            font-size: 1.25rem;
+            line-height: 1.35;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .updated {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .note {
+            background: var(--accent-soft);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            padding: 14px 16px;
+            margin: 18px 0;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                width: min(100% - 20px, 920px);
+                padding-top: 24px;
+            }
+
+            .policy {
+                padding: 22px;
+                border-radius: 14px;
+            }
+
+            .app-name {
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                font-size: 1.55rem;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0e151b;
+                --surface: #151f27;
+                --text: #edf4f8;
+                --text-secondary: #aab8c2;
+                --border: #2b3a45;
+                --accent: #69aef5;
+                --accent-secondary: #52d0c7;
+                --accent-soft: #122b38;
+            }
+
+            body {
+                background:
+                    radial-gradient(
+                        circle at top left,
+                        rgba(105, 174, 245, 0.08),
+                        transparent 34%
+                    ),
+                    radial-gradient(
+                        circle at top right,
+                        rgba(82, 208, 199, 0.08),
+                        transparent 32%
+                    ),
+                    var(--bg);
+            }
+
+            .language-button.active,
+            .brand-mark {
+                color: #071419;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div class="brand">
+            <div class="brand-mark">
+                C+
+            </div>
+
+            <h1 class="app-name">
+                Cota+
+            </h1>
+        </div>
+
+        <div class="subtitle">
+            Privacy &amp; Data
+        </div>
+
+    </div>
+
+    <div class="language-selector">
+
+        <button
+            class="language-button active"
+            onclick="showLanguage('pt', this)"
+        >
+            Português
+        </button>
+
+        <button
+            class="language-button"
+            onclick="showLanguage('en', this)"
+        >
+            English
+        </button>
+
+        <button
+            class="language-button"
+            onclick="showLanguage('es', this)"
+        >
+            Español
+        </button>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- PORTUGUÊS -->
+    <!-- ===================================================== -->
+
+    <section id="pt" class="policy active">
+
+        <h1>
+            Política de Privacidade — Cota+
+        </h1>
+
+        <p class="updated">
+            Última atualização: 2 de outubro de 2026
+        </p>
+
+        <p>
+            O Cota+ foi desenvolvido para ajudar o usuário a acompanhar
+            cotações e realizar conversões entre moedas fiduciárias e
+            criptomoedas.
+        </p>
+
+        <p>
+            Esta Política de Privacidade explica como as informações podem
+            ser armazenadas e processadas durante o uso do aplicativo.
+        </p>
+
+        <div class="note">
+            O Cota+ não exige criação de conta ou login e não realiza
+            compra, venda, transferência, custódia ou investimento em
+            moedas ou criptomoedas.
+        </div>
+
+
+        <h2>
+            1. Dados armazenados no dispositivo
+        </h2>
+
+        <p>
+            Preferências como moeda-base, idioma, tema, conclusão do
+            onboarding, configurações do aplicativo e cotações armazenadas
+            em cache podem ser mantidas localmente no próprio dispositivo.
+        </p>
+
+        <p>
+            O Cota+ não possui sistema próprio de contas de usuário e não
+            utiliza servidores próprios para armazenar um perfil pessoal
+            do usuário.
+        </p>
+
+        <p>
+            As principais funcionalidades do aplicativo podem ser utilizadas
+            sem a necessidade de criação de conta.
+        </p>
+
+
+        <h2>
+            2. Cotações e infraestrutura de rede
+        </h2>
+
+        <p>
+            Para obter dados de cotações, o Cota+ se comunica com uma
+            infraestrutura intermediária própria do serviço, que consulta
+            provedores externos de dados de mercado e cotações.
+        </p>
+
+        <p>
+            O aplicativo não precisa enviar nome, e-mail, dados bancários
+            ou outras informações pessoais para solicitar uma cotação.
+        </p>
+
+        <p>
+            Como ocorre em qualquer comunicação pela internet, provedores
+            de infraestrutura podem processar dados técnicos necessários
+            à transmissão da requisição, como endereço IP, informações de
+            rede e dados técnicos do dispositivo.
+        </p>
+
+        <p>
+            As conversões exibidas pelo Cota+ são calculadas com base nas
+            cotações disponíveis no aplicativo e não representam uma oferta
+            de compra ou venda de ativos.
+        </p>
+
+
+        <h2>
+            3. Anúncios
+        </h2>
+
+        <p>
+            A versão gratuita do Cota+ pode exibir anúncios fornecidos pelo
+            Google AdMob.
+        </p>
+
+        <p>
+            Os serviços de publicidade do Google podem coletar e processar
+            determinadas informações de acordo com suas próprias políticas,
+            incluindo, por exemplo:
+        </p>
+
+        <ul>
+            <li>identificadores do dispositivo;</li>
+            <li>identificadores de publicidade;</li>
+            <li>informações aproximadas de localização;</li>
+            <li>informações de diagnóstico;</li>
+            <li>interações com o aplicativo e com anúncios.</li>
+        </ul>
+
+        <p>
+            Quando exigido pela legislação aplicável, o aplicativo utiliza
+            mecanismos de consentimento fornecidos pelo Google para permitir
+            que o usuário gerencie suas escolhas de privacidade relacionadas
+            à publicidade.
+        </p>
+
+        <p>
+            Usuários que adquirem a opção Premium têm os anúncios removidos
+            do aplicativo.
+        </p>
+
+
+        <h2>
+            4. Compras
+        </h2>
+
+        <p>
+            A compra da opção Premium é processada pelo Google Play.
+        </p>
+
+        <p>
+            O Cota+ não recebe nem armazena diretamente dados de cartão de
+            crédito, débito ou outras informações financeiras utilizadas
+            na transação.
+        </p>
+
+        <p>
+            O processamento da compra é realizado de acordo com as políticas
+            e termos do Google Play.
+        </p>
+
+
+        <h2>
+            5. Permissões
+        </h2>
+
+        <p>
+            O Cota+ solicita apenas permissões necessárias para
+            funcionalidades específicas do aplicativo e para o funcionamento
+            dos serviços integrados.
+        </p>
+
+        <p>
+            As permissões podem variar de acordo com a versão do Android e
+            com os recursos utilizados pelo usuário.
+        </p>
+
+
+        <h2>
+            6. Compartilhamento e processamento por terceiros
+        </h2>
+
+        <p>
+            O desenvolvedor do Cota+ não vende dados pessoais dos usuários.
+        </p>
+
+        <p>
+            Serviços de terceiros integrados ao aplicativo ou à sua
+            infraestrutura podem coletar ou processar informações de acordo
+            com suas próprias políticas e termos, incluindo:
+        </p>
+
+        <ul>
+            <li>
+                Google AdMob, para publicidade;
+            </li>
+
+            <li>
+                Google Play Billing, para processamento da compra Premium;
+            </li>
+
+            <li>
+                Cloudflare, para infraestrutura e comunicação com o serviço
+                de cotações;
+            </li>
+
+            <li>
+                provedores de dados de mercado e cotações, para fornecimento
+                das informações exibidas no aplicativo.
+            </li>
+        </ul>
+
+        <p>
+            O Cota+ não utiliza sua infraestrutura de cotações para armazenar
+            um perfil pessoal do usuário ou o conteúdo das conversões como
+            histórico vinculado a uma conta.
+        </p>
+
+
+        <h2>
+            7. Exclusão de dados
+        </h2>
+
+        <p>
+            Como os principais dados e preferências do Cota+ são armazenados
+            localmente no dispositivo, o usuário pode removê-los limpando os
+            dados do aplicativo ou desinstalando o Cota+.
+        </p>
+
+        <p>
+            Informações eventualmente processadas por serviços de terceiros
+            estão sujeitas às políticas e mecanismos disponibilizados por
+            esses respectivos serviços.
+        </p>
+
+
+        <h2>
+            8. Crianças e adolescentes
+        </h2>
+
+        <p>
+            O Cota+ não é direcionado especificamente a crianças.
+        </p>
+
+        <p>
+            O aplicativo não coleta intencionalmente, por meio de sistema
+            próprio de contas ou servidores próprios de perfil, informações
+            pessoais de menores.
+        </p>
+
+
+        <h2>
+            9. Segurança
+        </h2>
+
+        <p>
+            O Cota+ busca limitar a coleta de dados ao necessário para o
+            funcionamento das funcionalidades oferecidas.
+        </p>
+
+        <p>
+            Credenciais utilizadas para comunicação com provedores de
+            cotações não são armazenadas diretamente no aplicativo
+            distribuído ao usuário, sendo mantidas em infraestrutura de
+            servidor apropriada.
+        </p>
+
+        <p>
+            Embora sejam adotadas medidas técnicas razoáveis de segurança,
+            nenhum método de transmissão ou armazenamento eletrônico pode
+            garantir segurança absoluta.
+        </p>
+
+
+        <h2>
+            10. Alterações nesta política
+        </h2>
+
+        <p>
+            Esta Política de Privacidade poderá ser atualizada futuramente
+            para refletir alterações no aplicativo, nos serviços de terceiros
+            utilizados, em requisitos legais ou em práticas de privacidade.
+        </p>
+
+        <p>
+            A data da última atualização será indicada no início desta página.
+        </p>
+
+
+        <h2>
+            11. Contato
+        </h2>
+
+        <p>
+            Para dúvidas relacionadas à privacidade ou ao aplicativo:
+        </p>
+
+        <p>
+            <a href="mailto:cotaplus.app@gmail.com">
+                cotaplus.app@gmail.com
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- ENGLISH -->
+    <!-- ===================================================== -->
+
+    <section id="en" class="policy">
+
+        <h1>
+            Privacy Policy — Cota+
+        </h1>
+
+        <p class="updated">
+            Last updated: October 2, 2026
+        </p>
+
+        <p>
+            Cota+ was developed to help users track exchange rates and
+            perform conversions between fiat currencies and cryptocurrencies.
+        </p>
+
+        <p>
+            This Privacy Policy explains how information may be stored and
+            processed while using the application.
+        </p>
+
+        <div class="note">
+            Cota+ does not require account creation or login and does not
+            perform the purchase, sale, transfer, custody, or investment
+            of currencies or cryptocurrencies.
+        </div>
+
+
+        <h2>
+            1. Data stored on the device
+        </h2>
+
+        <p>
+            Preferences such as base currency, language, theme, onboarding
+            completion, application settings, and cached quotes may be stored
+            locally on the user's device.
+        </p>
+
+        <p>
+            Cota+ does not operate its own user account system and does not
+            use its own servers to store a personal profile of the user.
+        </p>
+
+        <p>
+            The main application features can be used without creating
+            an account.
+        </p>
+
+
+        <h2>
+            2. Quotes and network infrastructure
+        </h2>
+
+        <p>
+            To obtain exchange-rate data, Cota+ communicates with an
+            intermediary service infrastructure that queries external
+            market-data and quote providers.
+        </p>
+
+        <p>
+            The application does not need to send the user's name, email
+            address, banking information, or other personal information
+            in order to request a quote.
+        </p>
+
+        <p>
+            As with any internet communication, infrastructure providers
+            may process technical data required to transmit the request,
+            such as IP address, network information, and technical device
+            information.
+        </p>
+
+        <p>
+            Conversions displayed by Cota+ are calculated using the quotes
+            available in the application and do not represent an offer to
+            buy or sell assets.
+        </p>
+
+
+        <h2>
+            3. Advertising
+        </h2>
+
+        <p>
+            The free version of Cota+ may display advertisements provided
+            by Google AdMob.
+        </p>
+
+        <p>
+            Google advertising services may collect and process certain
+            information in accordance with their own policies, including,
+            for example:
+        </p>
+
+        <ul>
+            <li>device identifiers;</li>
+            <li>advertising identifiers;</li>
+            <li>approximate location information;</li>
+            <li>diagnostic information;</li>
+            <li>interactions with the application and advertisements.</li>
+        </ul>
+
+        <p>
+            Where required by applicable law, the application uses consent
+            mechanisms provided by Google to allow users to manage their
+            privacy choices related to advertising.
+        </p>
+
+        <p>
+            Users who purchase the Premium option will have advertisements
+            removed from the application.
+        </p>
+
+
+        <h2>
+            4. Purchases
+        </h2>
+
+        <p>
+            The Premium purchase is processed by Google Play.
+        </p>
+
+        <p>
+            Cota+ does not directly receive or store credit card, debit card,
+            or other financial information used in the transaction.
+        </p>
+
+        <p>
+            Purchase processing is carried out in accordance with Google Play
+            policies and terms.
+        </p>
+
+
+        <h2>
+            5. Permissions
+        </h2>
+
+        <p>
+            Cota+ requests only the permissions required for specific
+            application features and for the operation of integrated services.
+        </p>
+
+        <p>
+            Permissions may vary depending on the Android version and the
+            features used by the user.
+        </p>
+
+
+        <h2>
+            6. Sharing and processing by third parties
+        </h2>
+
+        <p>
+            The developer of Cota+ does not sell users' personal data.
+        </p>
+
+        <p>
+            Third-party services integrated into the application or its
+            infrastructure may collect or process information in accordance
+            with their own policies and terms, including:
+        </p>
+
+        <ul>
+            <li>
+                Google AdMob, for advertising;
+            </li>
+
+            <li>
+                Google Play Billing, for processing Premium purchases;
+            </li>
+
+            <li>
+                Cloudflare, for infrastructure and communication with the
+                quote service;
+            </li>
+
+            <li>
+                market-data and quote providers, for providing the
+                information displayed in the application.
+            </li>
+        </ul>
+
+        <p>
+            Cota+ does not use its quote infrastructure to store a personal
+            user profile or a history of conversions linked to a user account.
+        </p>
+
+
+        <h2>
+            7. Data deletion
+        </h2>
+
+        <p>
+            Since the main Cota+ data and preferences are stored locally on
+            the device, users may remove them by clearing the application's
+            data or uninstalling Cota+.
+        </p>
+
+        <p>
+            Information processed by third-party services is subject to the
+            privacy policies and mechanisms provided by those respective
+            services.
+        </p>
+
+
+        <h2>
+            8. Children and minors
+        </h2>
+
+        <p>
+            Cota+ is not specifically directed at children.
+        </p>
+
+        <p>
+            The application does not intentionally collect personal information
+            from minors through its own account system or personal-profile
+            servers.
+        </p>
+
+
+        <h2>
+            9. Security
+        </h2>
+
+        <p>
+            Cota+ seeks to limit data collection to what is necessary for
+            the operation of the features offered.
+        </p>
+
+        <p>
+            Credentials used to communicate with quote providers are not
+            stored directly in the application distributed to users and are
+            instead kept in appropriate server-side infrastructure.
+        </p>
+
+        <p>
+            Although reasonable technical security measures are adopted,
+            no method of electronic transmission or storage can guarantee
+            absolute security.
+        </p>
+
+
+        <h2>
+            10. Changes to this policy
+        </h2>
+
+        <p>
+            This Privacy Policy may be updated in the future to reflect
+            changes to the application, third-party services used, legal
+            requirements, or privacy practices.
+        </p>
+
+        <p>
+            The date of the latest update will be shown at the beginning
+            of this page.
+        </p>
+
+
+        <h2>
+            11. Contact
+        </h2>
+
+        <p>
+            For questions related to privacy or the application:
+        </p>
+
+        <p>
+            <a href="mailto:cotaplus.app@gmail.com">
+                cotaplus.app@gmail.com
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- ESPAÑOL -->
+    <!-- ===================================================== -->
+
+    <section id="es" class="policy">
+
+        <h1>
+            Política de Privacidad — Cota+
+        </h1>
+
+        <p class="updated">
+            Última actualización: 2 de octubre de 2026
+        </p>
+
+        <p>
+            Cota+ fue desarrollado para ayudar al usuario a consultar
+            cotizaciones y realizar conversiones entre monedas fiduciarias
+            y criptomonedas.
+        </p>
+
+        <p>
+            Esta Política de Privacidad explica cómo la información puede
+            almacenarse y procesarse durante el uso de la aplicación.
+        </p>
+
+        <div class="note">
+            Cota+ no requiere la creación de una cuenta o inicio de sesión
+            y no realiza compras, ventas, transferencias, custodia ni
+            inversiones en monedas o criptomonedas.
+        </div>
+
+
+        <h2>
+            1. Datos almacenados en el dispositivo
+        </h2>
+
+        <p>
+            Preferencias como moneda base, idioma, tema, finalización del
+            onboarding, configuración de la aplicación y cotizaciones
+            almacenadas en caché pueden mantenerse localmente en el
+            dispositivo del usuario.
+        </p>
+
+        <p>
+            Cota+ no dispone de un sistema propio de cuentas de usuario
+            y no utiliza servidores propios para almacenar un perfil
+            personal del usuario.
+        </p>
+
+        <p>
+            Las principales funciones de la aplicación pueden utilizarse
+            sin necesidad de crear una cuenta.
+        </p>
+
+
+        <h2>
+            2. Cotizaciones e infraestructura de red
+        </h2>
+
+        <p>
+            Para obtener datos de cotizaciones, Cota+ se comunica con una
+            infraestructura intermediaria del servicio que consulta
+            proveedores externos de datos de mercado y cotizaciones.
+        </p>
+
+        <p>
+            La aplicación no necesita enviar el nombre, correo electrónico,
+            datos bancarios u otra información personal del usuario para
+            solicitar una cotización.
+        </p>
+
+        <p>
+            Como ocurre con cualquier comunicación por internet, los
+            proveedores de infraestructura pueden procesar datos técnicos
+            necesarios para transmitir la solicitud, como la dirección IP,
+            información de red y datos técnicos del dispositivo.
+        </p>
+
+        <p>
+            Las conversiones mostradas por Cota+ se calculan utilizando las
+            cotizaciones disponibles en la aplicación y no representan una
+            oferta de compra o venta de activos.
+        </p>
+
+
+        <h2>
+            3. Publicidad
+        </h2>
+
+        <p>
+            La versión gratuita de Cota+ puede mostrar anuncios proporcionados
+            por Google AdMob.
+        </p>
+
+        <p>
+            Los servicios publicitarios de Google pueden recopilar y procesar
+            determinada información de acuerdo con sus propias políticas,
+            incluyendo, por ejemplo:
+        </p>
+
+        <ul>
+            <li>identificadores del dispositivo;</li>
+            <li>identificadores publicitarios;</li>
+            <li>información aproximada de ubicación;</li>
+            <li>información de diagnóstico;</li>
+            <li>interacciones con la aplicación y con los anuncios.</li>
+        </ul>
+
+        <p>
+            Cuando la legislación aplicable lo exige, la aplicación utiliza
+            mecanismos de consentimiento proporcionados por Google para
+            permitir que el usuario gestione sus opciones de privacidad
+            relacionadas con la publicidad.
+        </p>
+
+        <p>
+            Los usuarios que adquieren la opción Premium tendrán los anuncios
+            eliminados de la aplicación.
+        </p>
+
+
+        <h2>
+            4. Compras
+        </h2>
+
+        <p>
+            La compra de la opción Premium es procesada por Google Play.
+        </p>
+
+        <p>
+            Cota+ no recibe ni almacena directamente datos de tarjetas de
+            crédito, débito u otra información financiera utilizada en la
+            transacción.
+        </p>
+
+        <p>
+            El procesamiento de la compra se realiza de acuerdo con las
+            políticas y los términos de Google Play.
+        </p>
+
+
+        <h2>
+            5. Permisos
+        </h2>
+
+        <p>
+            Cota+ solicita únicamente los permisos necesarios para funciones
+            específicas de la aplicación y para el funcionamiento de los
+            servicios integrados.
+        </p>
+
+        <p>
+            Los permisos pueden variar según la versión de Android y las
+            funciones utilizadas por el usuario.
+        </p>
+
+
+        <h2>
+            6. Compartición y procesamiento por terceros
+        </h2>
+
+        <p>
+            El desarrollador de Cota+ no vende datos personales de los usuarios.
+        </p>
+
+        <p>
+            Los servicios de terceros integrados en la aplicación o en su
+            infraestructura pueden recopilar o procesar información de acuerdo
+            con sus propias políticas y términos, incluyendo:
+        </p>
+
+        <ul>
+            <li>
+                Google AdMob, para publicidad;
+            </li>
+
+            <li>
+                Google Play Billing, para procesar compras Premium;
+            </li>
+
+            <li>
+                Cloudflare, para infraestructura y comunicación con el
+                servicio de cotizaciones;
+            </li>
+
+            <li>
+                proveedores de datos de mercado y cotizaciones, para
+                proporcionar la información mostrada en la aplicación.
+            </li>
+        </ul>
+
+        <p>
+            Cota+ no utiliza su infraestructura de cotizaciones para almacenar
+            un perfil personal del usuario ni un historial de conversiones
+            vinculado a una cuenta.
+        </p>
+
+
+        <h2>
+            7. Eliminación de datos
+        </h2>
+
+        <p>
+            Dado que los principales datos y preferencias de Cota+ se
+            almacenan localmente en el dispositivo, el usuario puede
+            eliminarlos borrando los datos de la aplicación o desinstalando
+            Cota+.
+        </p>
+
+        <p>
+            La información procesada por servicios de terceros está sujeta
+            a las políticas de privacidad y mecanismos ofrecidos por dichos
+            servicios.
+        </p>
+
+
+        <h2>
+            8. Niños y menores de edad
+        </h2>
+
+        <p>
+            Cota+ no está dirigido específicamente a niños.
+        </p>
+
+        <p>
+            La aplicación no recopila intencionalmente información personal
+            de menores mediante un sistema propio de cuentas o servidores
+            propios de perfiles personales.
+        </p>
+
+
+        <h2>
+            9. Seguridad
+        </h2>
+
+        <p>
+            Cota+ busca limitar la recopilación de datos a lo necesario para
+            el funcionamiento de las funciones ofrecidas.
+        </p>
+
+        <p>
+            Las credenciales utilizadas para comunicarse con los proveedores
+            de cotizaciones no se almacenan directamente en la aplicación
+            distribuida a los usuarios y se mantienen en una infraestructura
+            de servidor adecuada.
+        </p>
+
+        <p>
+            Aunque se adoptan medidas técnicas razonables de seguridad,
+            ningún método de transmisión o almacenamiento electrónico puede
+            garantizar una seguridad absoluta.
+        </p>
+
+
+        <h2>
+            10. Cambios en esta política
+        </h2>
+
+        <p>
+            Esta Política de Privacidad podrá actualizarse en el futuro para
+            reflejar cambios en la aplicación, los servicios de terceros
+            utilizados, requisitos legales o prácticas de privacidad.
+        </p>
+
+        <p>
+            La fecha de la última actualización se indicará al comienzo
+            de esta página.
+        </p>
+
+
+        <h2>
+            11. Contacto
+        </h2>
+
+        <p>
+            Para consultas relacionadas con la privacidad o con la aplicación:
+        </p>
+
+        <p>
+            <a href="mailto:cotaplus.app@gmail.com">
+                cotaplus.app@gmail.com
+            </a>
+        </p>
+
+    </section>
+
+
+    <div class="footer">
+        Cota+ © 2026
+    </div>
+
+</div>
+
+
+<script>
+    function showLanguage(language, button) {
+
+        document
+            .querySelectorAll(".policy")
+            .forEach(function (section) {
+                section.classList.remove("active");
+            });
+
+        document
+            .querySelectorAll(".language-button")
+            .forEach(function (item) {
+                item.classList.remove("active");
+            });
+
+        document
+            .getElementById(language)
+            .classList
+            .add("active");
+
+        button.classList.add("active");
+
+        document.documentElement.lang =
+            language === "pt"
+                ? "pt-BR"
+                : language === "en"
+                    ? "en"
+                    : "es";
+    }
+</script>
+
+</body>
+</html>
