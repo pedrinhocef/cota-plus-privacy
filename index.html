@@ -327,7 +327,7 @@
         </h1>
 
         <p class="updated">
-            Última atualização: 2 de outubro de 2026
+            Última atualização: 7 de outubro de 2026
         </p>
 
         <p>
@@ -368,6 +368,10 @@
             As principais funcionalidades do aplicativo podem ser utilizadas
             sem a necessidade de criação de conta.
         </p>
+        <p>
+            A estrutura da Wallet (carteira), os ativos registrados (holdings), suas quantidades, favoritos e snapshots (registros do histórico patrimonial) permanecem armazenados no dispositivo, sem sincronização com uma conta Cota+. Isso não impede que ações isoladas envolvendo ativos sejam registradas nas métricas de uso, conforme explicado abaixo.
+        </p>
+
 
 
         <h2>
@@ -397,6 +401,34 @@
             cotações disponíveis no aplicativo e não representam uma oferta
             de compra ou venda de ativos.
         </p>
+        <p>
+            A infraestrutura intermediária de cotações (BFF) recebe pedidos de cotações ou histórico com contexto como ativo, período e moeda-base; não recebe a estrutura da carteira, suas quantidades ou snapshots financeiros.
+        </p>
+
+        <h2>
+            2.1. Firebase Analytics e dados de uso
+        </h2>
+
+        <p>
+            Usamos Google Analytics for Firebase (Firebase Analytics) para entender como o Cota+ é utilizado, medir o uso e o desempenho das funcionalidades, produzir métricas agregadas e melhorar o produto. O SDK pode coletar identificadores técnicos de instalação/instância do aplicativo, informações do dispositivo e do app, interações com o aplicativo, localização aproximada derivada de dados de rede e eventos automáticos, inclusive de primeira abertura, sessões, engajamento e compras.
+        </p>
+
+        <p>
+            Os eventos personalizados registram apenas ações e contexto discreto de uso, como código e tipo de ativo (asset_code e asset_type), período, moeda-base, origem da ação e produto adquirido. As propriedades de uso podem indicar moeda-base, tipo de plano e conclusão do onboarding. Identificadores técnicos podem associar ações de uso à mesma instância do aplicativo; a ausência de nome ou e-mail não torna esses dados necessariamente anônimos.
+        </p>
+
+        <p>
+            Não enviamos ao Analytics valor da carteira, saldo, quantidades de holdings, valor convertido, preço médio, ganhos/perdas (PnL) ou snapshots financeiros. Não enviamos a estrutura da Wallet ou seu histórico patrimonial. Interações isoladas com ativos podem integrar as métricas, sem os valores ou quantidades necessários para reconstruir o patrimônio.
+        </p>
+
+        <p>
+            Eventos automáticos relacionados à compra de produtos do aplicativo podem incluir identificador ou nome do produto, preço e moeda da transação. Esses dados dizem respeito à compra de Remove Ads ou Premium no Google Play e são distintos dos valores financeiros locais da Wallet e das conversões.
+        </p>
+
+        <p>
+            Na configuração do Cota+, a coleta do identificador de publicidade pelo Analytics, os sinais de personalização de anúncios e o registro automático de telas estão desabilitados por padrão. Isso não desativa os demais eventos automáticos nem a coleta própria do AdMob descrita nesta política. Analytics está habilitado por padrão e o aplicativo não oferece uma opção universal para desativá-lo; as escolhas de consentimento de publicidade não equivalem a um controle geral do Analytics.
+        </p>
+
 
 
         <h2>
@@ -430,8 +462,7 @@
         </p>
 
         <p>
-            Usuários que adquirem a opção Premium têm os anúncios removidos
-            do aplicativo.
+            Usuários que adquirem Remove Ads ou Premium têm os anúncios removidos do aplicativo. Remover anúncios não desativa automaticamente Firebase Analytics, Google Play Billing ou consultas de cotações pela infraestrutura BFF.
         </p>
 
 
@@ -440,7 +471,7 @@
         </h2>
 
         <p>
-            A compra da opção Premium é processada pelo Google Play.
+            As compras de Remove Ads e Premium são processadas pelo Google Play Billing. Remove Ads remove anúncios e mantém os recursos e limites da versão Free. Premium remove anúncios e desbloqueia os recursos Premium.
         </p>
 
         <p>
@@ -453,6 +484,18 @@
             O processamento da compra é realizado de acordo com as políticas
             e termos do Google Play.
         </p>
+        <p>
+            O aplicativo processa informações do produto e do estado da compra para verificar, reconhecer e restaurar o acesso adquirido. Tokens de compra não são enviados pelo Cota+ ao BFF nem aos eventos personalizados do Analytics. Eventos de uso podem indicar produto adquirido e tipo de plano, e o SDK de Analytics pode registrar eventos automáticos de compra conforme descrito nesta política.
+        </p>
+
+        <h2>
+            4.1. Avaliações no Google Play (In-App Review)
+        </h2>
+
+        <p>
+            O Cota+ pode solicitar uma avaliação pelo fluxo nativo In-App Review do Google Play. O Google controla se e quando esse fluxo é exibido e processa a avaliação conforme suas políticas. O aplicativo não recebe o texto, a nota ou a identidade do avaliador. Eventos personalizados podem registrar a elegibilidade ou a tentativa de solicitar uma avaliação, sem coletar seu conteúdo.
+        </p>
+
 
 
         <h2>
@@ -491,7 +534,7 @@
             </li>
 
             <li>
-                Google Play Billing, para processamento da compra Premium;
+                Google Play Billing, para processamento de compras Remove Ads e Premium;
             </li>
 
             <li>
@@ -502,6 +545,14 @@
             <li>
                 provedores de dados de mercado e cotações, para fornecimento
                 das informações exibidas no aplicativo.
+            </li>
+        
+            <li>
+                Google Analytics for Firebase, para métricas e análise de uso;
+            </li>
+
+            <li>
+                Google Play In-App Review, para o fluxo nativo de avaliações;
             </li>
         </ul>
 
@@ -517,16 +568,14 @@
         </h2>
 
         <p>
-            Como os principais dados e preferências do Cota+ são armazenados
-            localmente no dispositivo, o usuário pode removê-los limpando os
-            dados do aplicativo ou desinstalando o Cota+.
+            Limpar os dados do aplicativo ou desinstalar o Cota+ remove os registros locais, incluindo preferências, Wallet, holdings, quantidades, favoritos, cache e snapshots financeiros. Isso não garante a exclusão de informações já transmitidas ou processadas por Google ou outros prestadores, nem apaga o histórico de compras mantido pelo Google Play.
         </p>
 
         <p>
-            Informações eventualmente processadas por serviços de terceiros
-            estão sujeitas às políticas e mecanismos disponibilizados por
-            esses respectivos serviços.
+            Dados previamente processados por terceiros estão sujeitos às políticas, prazos de retenção e mecanismos dos respectivos serviços. Para dúvidas e solicitações de privacidade, contate cotaplus.app@gmail.com. A análise e o atendimento de uma solicitação dependem dos dados e identificadores disponíveis e das ferramentas dos prestadores; não há um fluxo integrado no aplicativo que garanta a exclusão remota de todos esses registros.
         </p>
+
+
 
 
         <h2>
@@ -610,7 +659,7 @@
         </h1>
 
         <p class="updated">
-            Last updated: October 2, 2026
+            Last updated: October 7, 2026
         </p>
 
         <p>
@@ -649,6 +698,10 @@
             The main application features can be used without creating
             an account.
         </p>
+        <p>
+            The Wallet structure, recorded assets (holdings), quantities, favorites and financial snapshots (portfolio history records) remain stored on the device without Cota+ account synchronization. Individual asset interactions may still be recorded in usage metrics, as explained below.
+        </p>
+
 
 
         <h2>
@@ -679,6 +732,34 @@
             available in the application and do not represent an offer to
             buy or sell assets.
         </p>
+        <p>
+            The intermediary quote infrastructure (BFF) receives quote or historical-data requests with context such as asset, period and base currency; it does not receive the Wallet structure, holding quantities or financial snapshots.
+        </p>
+
+        <h2>
+            2.1. Firebase Analytics and usage data
+        </h2>
+
+        <p>
+            We use Google Analytics for Firebase (Firebase Analytics) to understand how Cota+ is used, measure feature usage and performance, produce aggregate metrics and improve the product. The SDK may collect technical installation/app-instance identifiers, device and app information, app interactions, approximate location derived from network data and automatic events, including first launch, sessions, engagement and purchases.
+        </p>
+
+        <p>
+            Custom events record only actions and discrete usage context, such as asset code and type (asset_code and asset_type), period, base currency, action source and purchased product. Usage properties may indicate base currency, plan type and onboarding completion. Technical identifiers may associate usage actions with the same app instance; the absence of a name or email does not necessarily make this data anonymous.
+        </p>
+
+        <p>
+            We do not send wallet value, balance, holding quantities, converted amounts, average purchase price, gains/losses (PnL) or financial snapshots to Analytics. We do not send the Wallet structure or portfolio history. Individual asset interactions may be included in metrics without the amounts or quantities needed to reconstruct portfolio wealth.
+        </p>
+
+        <p>
+            Automatic events related to purchases of in-app products may include the product identifier or name, price and transaction currency. This data concerns purchases of Remove Ads or Premium through Google Play and is separate from local financial values in the Wallet and conversions.
+        </p>
+
+        <p>
+            In Cota+, Analytics advertising-ID collection, ad-personalization signals and automatic screen reporting are disabled by default. This does not disable other automatic events or AdMob’s own collection described in this policy. Analytics is enabled by default and the app does not offer a universal option to disable it; advertising consent choices do not constitute a general Analytics control.
+        </p>
+
 
 
         <h2>
@@ -711,8 +792,7 @@
         </p>
 
         <p>
-            Users who purchase the Premium option will have advertisements
-            removed from the application.
+            Users who purchase Remove Ads or Premium have advertisements removed from the application. Removing advertisements does not automatically disable Firebase Analytics, Google Play Billing or quote requests through the BFF infrastructure.
         </p>
 
 
@@ -721,7 +801,7 @@
         </h2>
 
         <p>
-            The Premium purchase is processed by Google Play.
+            Remove Ads and Premium purchases are processed through Google Play Billing. Remove Ads removes advertisements while retaining Free features and limits. Premium removes advertisements and unlocks Premium features.
         </p>
 
         <p>
@@ -733,6 +813,18 @@
             Purchase processing is carried out in accordance with Google Play
             policies and terms.
         </p>
+        <p>
+            The app processes product and purchase-status information to verify, acknowledge and restore purchased access. Cota+ does not send purchase tokens to the BFF or custom Analytics events. Usage events may indicate the purchased product and plan type, and the Analytics SDK may record automatic purchase events as described in this policy.
+        </p>
+
+        <h2>
+            4.1. Google Play reviews (In-App Review)
+        </h2>
+
+        <p>
+            Cota+ may request a review through Google Play’s native In-App Review flow. Google controls whether and when this flow appears and processes the review under its policies. The app does not receive the review text, rating or reviewer’s identity. Custom events may record eligibility or an attempt to request a review without collecting its content.
+        </p>
+
 
 
         <h2>
@@ -770,7 +862,7 @@
             </li>
 
             <li>
-                Google Play Billing, for processing Premium purchases;
+                Google Play Billing, for processing Remove Ads and Premium purchases;
             </li>
 
             <li>
@@ -781,6 +873,14 @@
             <li>
                 market-data and quote providers, for providing the
                 information displayed in the application.
+            </li>
+        
+            <li>
+                Google Analytics for Firebase, for usage metrics and analytics;
+            </li>
+
+            <li>
+                Google Play In-App Review, for the native review flow;
             </li>
         </ul>
 
@@ -795,16 +895,14 @@
         </h2>
 
         <p>
-            Since the main Cota+ data and preferences are stored locally on
-            the device, users may remove them by clearing the application's
-            data or uninstalling Cota+.
+            Clearing app data or uninstalling Cota+ removes local records, including preferences, Wallet, holdings, quantities, favorites, cache and financial snapshots. This does not guarantee deletion of information already transmitted to or processed by Google or other providers, nor does it erase purchase history maintained by Google Play.
         </p>
 
         <p>
-            Information processed by third-party services is subject to the
-            privacy policies and mechanisms provided by those respective
-            services.
+            Data previously processed by third parties is subject to their respective policies, retention periods and available mechanisms. Contact cotaplus.app@gmail.com for privacy questions and requests. Assessing and handling a request depends on available data and identifiers and the providers’ tools; the app has no integrated flow that guarantees remote deletion of all these records.
         </p>
+
+
 
 
         <h2>
@@ -888,7 +986,7 @@
         </h1>
 
         <p class="updated">
-            Última actualización: 2 de octubre de 2026
+            Última actualización: 7 de octubre de 2026
         </p>
 
         <p>
@@ -930,6 +1028,10 @@
             Las principales funciones de la aplicación pueden utilizarse
             sin necesidad de crear una cuenta.
         </p>
+        <p>
+            La estructura de Wallet (cartera), los activos registrados (holdings), sus cantidades, favoritos y snapshots financieros (registros del historial patrimonial) permanecen almacenados en el dispositivo, sin sincronización con una cuenta Cota+. Las interacciones aisladas con activos pueden registrarse en las métricas de uso, como se explica a continuación.
+        </p>
+
 
 
         <h2>
@@ -960,6 +1062,34 @@
             cotizaciones disponibles en la aplicación y no representan una
             oferta de compra o venta de activos.
         </p>
+        <p>
+            La infraestructura intermediaria de cotizaciones (BFF) recibe solicitudes de cotizaciones o datos históricos con contexto como activo, período y moneda base; no recibe la estructura de Wallet, sus cantidades ni snapshots financieros.
+        </p>
+
+        <h2>
+            2.1. Firebase Analytics y datos de uso
+        </h2>
+
+        <p>
+            Usamos Google Analytics for Firebase (Firebase Analytics) para comprender el uso de Cota+, medir el uso y el desempeño de sus funciones, obtener métricas agregadas y mejorar el producto. El SDK puede recopilar identificadores técnicos de instalación/instancia de la app, información del dispositivo y de la app, interacciones con la aplicación, ubicación aproximada derivada de datos de red y eventos automáticos, incluidos los de primera apertura, sesiones, interacción y compras.
+        </p>
+
+        <p>
+            Los eventos personalizados registran únicamente acciones y contexto discreto de uso, como código y tipo de activo (asset_code y asset_type), período, moneda base, origen de la acción y producto adquirido. Las propiedades de uso pueden indicar moneda base, tipo de plan y finalización del onboarding. Los identificadores técnicos pueden asociar acciones de uso con la misma instancia de la app; la ausencia de nombre o correo electrónico no convierte necesariamente estos datos en anónimos.
+        </p>
+
+        <p>
+            No enviamos a Analytics valor de la cartera, saldo, cantidades de holdings, importes convertidos, precio medio, ganancias/pérdidas (PnL) ni snapshots financieros. No enviamos la estructura de Wallet ni su historial patrimonial. Las interacciones aisladas con activos pueden formar parte de las métricas sin los valores o cantidades necesarios para reconstruir el patrimonio.
+        </p>
+
+        <p>
+            Los eventos automáticos relacionados con compras de productos de la app pueden incluir identificador o nombre del producto, precio y moneda de la transacción. Estos datos corresponden a compras de Remove Ads o Premium en Google Play y son distintos de los valores financieros locales de Wallet y de las conversiones.
+        </p>
+
+        <p>
+            En Cota+, la recopilación del identificador publicitario por Analytics, las señales de personalización de anuncios y el registro automático de pantallas están desactivados por defecto. Esto no desactiva los demás eventos automáticos ni la recopilación propia de AdMob descrita en esta política. Analytics está habilitado por defecto y la app no ofrece una opción universal para desactivarlo; las opciones de consentimiento publicitario no equivalen a un control general de Analytics.
+        </p>
+
 
 
         <h2>
@@ -993,8 +1123,7 @@
         </p>
 
         <p>
-            Los usuarios que adquieren la opción Premium tendrán los anuncios
-            eliminados de la aplicación.
+            Los usuarios que adquieren Remove Ads o Premium tienen los anuncios eliminados de la aplicación. Eliminar anuncios no desactiva automáticamente Firebase Analytics, Google Play Billing ni las consultas de cotizaciones mediante la infraestructura BFF.
         </p>
 
 
@@ -1003,7 +1132,7 @@
         </h2>
 
         <p>
-            La compra de la opción Premium es procesada por Google Play.
+            Las compras de Remove Ads y Premium se procesan mediante Google Play Billing. Remove Ads elimina anuncios y mantiene las funciones y los límites de la versión Free. Premium elimina anuncios y desbloquea las funciones Premium.
         </p>
 
         <p>
@@ -1016,6 +1145,18 @@
             El procesamiento de la compra se realiza de acuerdo con las
             políticas y los términos de Google Play.
         </p>
+        <p>
+            La app procesa información del producto y del estado de compra para verificar, confirmar y restaurar el acceso adquirido. Cota+ no envía tokens de compra al BFF ni a eventos personalizados de Analytics. Los eventos de uso pueden indicar el producto adquirido y el tipo de plan, y el SDK de Analytics puede registrar eventos automáticos de compra como se describe en esta política.
+        </p>
+
+        <h2>
+            4.1. Reseñas en Google Play (In-App Review)
+        </h2>
+
+        <p>
+            Cota+ puede solicitar una reseña mediante el flujo nativo In-App Review de Google Play. Google controla si se muestra este flujo y cuándo, y procesa la reseña conforme a sus políticas. La app no recibe el texto, la puntuación ni la identidad del autor. Los eventos personalizados pueden registrar la elegibilidad o el intento de solicitar una reseña sin recopilar su contenido.
+        </p>
+
 
 
         <h2>
@@ -1054,7 +1195,7 @@
             </li>
 
             <li>
-                Google Play Billing, para procesar compras Premium;
+                Google Play Billing, para procesar compras de Remove Ads y Premium;
             </li>
 
             <li>
@@ -1065,6 +1206,14 @@
             <li>
                 proveedores de datos de mercado y cotizaciones, para
                 proporcionar la información mostrada en la aplicación.
+            </li>
+        
+            <li>
+                Google Analytics for Firebase, para métricas y análisis de uso;
+            </li>
+
+            <li>
+                Google Play In-App Review, para el flujo nativo de reseñas;
             </li>
         </ul>
 
@@ -1080,17 +1229,14 @@
         </h2>
 
         <p>
-            Dado que los principales datos y preferencias de Cota+ se
-            almacenan localmente en el dispositivo, el usuario puede
-            eliminarlos borrando los datos de la aplicación o desinstalando
-            Cota+.
+            Borrar los datos de la app o desinstalar Cota+ elimina los registros locales, incluidas preferencias, Wallet, holdings, cantidades, favoritos, caché y snapshots financieros. Esto no garantiza la eliminación de información ya transmitida o procesada por Google u otros proveedores, ni borra el historial de compras mantenido por Google Play.
         </p>
 
         <p>
-            La información procesada por servicios de terceros está sujeta
-            a las políticas de privacidad y mecanismos ofrecidos por dichos
-            servicios.
+            Los datos ya procesados por terceros están sujetos a las políticas, los plazos de conservación y los mecanismos de los respectivos servicios. Contacte cotaplus.app@gmail.com para consultas y solicitudes de privacidad. La evaluación y tramitación de una solicitud dependen de los datos e identificadores disponibles y de las herramientas de los proveedores; la app no dispone de un flujo integrado que garantice la eliminación remota de todos estos registros.
         </p>
+
+
 
 
         <h2>
